@@ -1,0 +1,87 @@
+DIV.quote {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 10px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 10px; BACKGROUND: #f3f3f3; PADDING-BOTTOM: 10px; MARGIN: 5px 20px; BORDER-LEFT: #cccccc 1px solid; COLOR: #81888c; PADDING-TOP: 10px; BORDER-BOTTOM: #cccccc 1px solid
+}
+#nav {
+	BORDER-RIGHT: #6b9ad6 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #6b9ad6 1px solid; MARGIN-TOP: 10px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #6b9ad6 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #6b9ad6 1px solid
+}
+#nav P {
+	HEIGHT: 20px
+}
+#nav .nav_left {
+	FLOAT: left
+}
+#nav .nav_right {
+	FLOAT: right; PADDING-TOP: 5px
+}
+#button {
+	MARGIN: 10px 0px
+}
+.topic {
+	BORDER-RIGHT: #6b9ad6 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #6b9ad6 1px solid; MARGIN-TOP: 10px; PADDING-LEFT: 1px; BACKGROUND: url(../image/topicbg.png) repeat-y -150px 0px; PADDING-BOTTOM: 1px; BORDER-LEFT: #6b9ad6 1px solid; LINE-HEIGHT: 20px; PADDING-TOP: 1px; BORDER-BOTTOM: #6b9ad6 1px solid; moz-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25)
+}
+.topic .title {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 0px; PADDING-TOP: 5px; HEIGHT: 25px; BACKGROUND-COLOR: #d6ebff
+}
+.topic .title .t_left {
+	FONT-WEIGHT: bold; FLOAT: left
+}
+.topic .title .t_right {
+	FLOAT: right
+}
+.topic .main {
+	
+}
+.topic .main .main_left {
+	FLOAT: left; WIDTH: 250px
+}
+.topic .main .main_right {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN-LEFT: 260px; PADDING-TOP: 10px
+}
+.topic .content {
+	POSITION: relative
+}
+.topic .maincontent {
+	MARGIN-BOTTOM: 50px; MARGIN-RIGHT: 180px; WORD-WRAP: break-word
+}
+.topic .point {
+	BORDER-RIGHT: #aaaaaa 1px dashed; PADDING-RIGHT: 2px; BORDER-TOP: #aaaaaa 1px dashed; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 20px 50px; BORDER-LEFT: #aaaaaa 1px dashed; PADDING-TOP: 2px; BORDER-BOTTOM: #aaaaaa 1px dashed; BACKGROUND-COLOR: #f0f0f0
+}
+.vote P {
+	BORDER-BOTTOM: #ccc 1px solid
+}
+.vote SPAN {
+	DISPLAY: inline-block
+}
+#up {
+	RIGHT: 30px; BACKGROUND: url(../image/upbg.jpg) #ffffcc repeat-x; WIDTH: 61px; POSITION: absolute; TOP: 10px; HEIGHT: 68px
+}
+#up #upnum {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; LINE-HEIGHT: 40px; HEIGHT: 40px; TEXT-ALIGN: center
+}
+#up #uptext {
+	HEIGHT: 28px; TEXT-ALIGN: center
+}
+.userinfo {
+	MARGIN: 20px 0px; TEXT-ALIGN: center
+}
+.userinfo P {
+	HEIGHT: 20px
+}
+.userinfo .user {
+	MARGIN: 0px auto; WIDTH: 200px
+}
+#page {
+	BORDER-RIGHT: #6b9ad6 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #6b9ad6 1px solid; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; MARGIN: 10px 0px; BORDER-LEFT: #6b9ad6 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #6b9ad6 1px solid; HEIGHT: 20px; BACKGROUND-COLOR: #d6ebff; TEXT-ALIGN: center
+}
+#manage {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaaaaa 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; MARGIN: 10px 0px; BORDER-LEFT: #aaaaaa 1px solid; LINE-HEIGHT: 20px; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px solid; HEIGHT: 20px
+}
+#reply {
+	BORDER-RIGHT: #ff6600 1px solid; BORDER-TOP: #ff6600 1px solid; BORDER-LEFT: #ff6600 1px solid; BORDER-BOTTOM: #ff6600 1px solid; BACKGROUND-COLOR: #f0f0f0; TEXT-ALIGN: center
+}
+#reply DIV {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; FONT-WEIGHT: bold; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; TEXT-ALIGN: center
+}
+#reply .title {
+	FONT-WEIGHT: bold; COLOR: #fff; HEIGHT: 15px; BACKGROUND-COLOR: #ff6600
+}

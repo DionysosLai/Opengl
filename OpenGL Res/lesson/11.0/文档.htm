@@ -1,0 +1,517 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0258)file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/[%E5%8E%9F%E5%88%9B]OpenGL%E5%85%A5%E9%97%A8%E5%AD%A6%E4%B9%A0%E2%80%94%E2%80%94%E7%AC%AC%E5%8D%81%E4%B8%80%E8%AF%BE%20%E2%80%94%20%E7%BC%96%E7%A8%8B%E7%88%B1%E5%A5%BD%E8%80%85%E8%AE%BA%E5%9D%9Bhttp--bbs_pfan_cn.htm -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=GBK"><title>[原创]OpenGL入门学习——第十一课 — 编程爱好者论坛http://bbs.pfan.cn</title><link href="./文档_files/common.css" type="text/css" rel="stylesheet"><link href="./文档_files/post.css" type="text/css" rel="stylesheet"><link title="最新30篇主题" href="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/rss.asp?bbsid=5" type="application/rss+xml" rel="alternate">
+
+<script src="./文档_files/ajax.js" type="text/javascript"></script>
+
+<script src="./文档_files/common.js" type="text/javascript"></script>
+
+<meta content="MSHTML 6.00.2900.3676" name="GENERATOR"></head>
+<body>
+<div id="bbsheader">
+<div class="menu"><a href="http://www.programfan.com/" target="_blank"><strong>首页</strong></a> | <a href="http://www.programfan.com/reg.asp" target="_blank"><strong>通行证</strong></a> 
+| <a href="http://bbs.pfan.cn/" target="_blank">论坛</a> | <a href="http://blog.pfan.cn/" target="_blank">博客</a> | <a href="http://www.programfan.com/book/" target="_blank">书评</a> | <a href="http://www.programfan.com/article/" target="_blank">开发文章</a> | <a href="http://job.pfan.cn/" target="_blank">人才招聘</a> | <a href="http://www.programfan.com/news/" target="_blank">资讯</a> | <a href="http://www.programfan.com/download/" target="_blank">工具下载</a> | <a href="http://www.programfan.com/code/" target="_blank">源码下载</a> | <a href="http://www.programfan.com/project/" target="_blank">项目交易</a> | <a href="http://www.programfan.com/team/" target="_blank">兴趣小组</a> | <a href="http://www.programfan.com/wysoft/" target="_blank">网友作品</a> | <a href="http://www.programfan.com/onlineexam/" target="_blank">C语言试题测试</a> | <a href="http://www.programfan.com/share/" target="_blank">资源共享</a> | <a href="http://www.programfan.com/problem/" target="_blank">ACM题库</a> </div>
+<div>
+<div class="logo"><a href="http://bbs.pfan.cn/main.asp"><img height="80" src="./文档_files/logo.gif" width="190" border="0"></a><br><a class="redfont" href="http://www.programfan.com/user/register.asp"><strong>注册新会员</strong></a> <a class="redfont" href="http://www.programfan.com/reg.asp"><strong>登陆论坛</strong></a> 
+</div>
+<div class="banner">
+<script type="text/JavaScript">
+			alimama_pid="mm_10037389_223358_1163631";
+			alimama_titlecolor="0000FF";
+			alimama_descolor ="000000";
+			alimama_bgcolor="FFFFFF";
+			alimama_bordercolor="E6E6E6";
+			alimama_linkcolor="008000";
+			alimama_bottomcolor="FFFFFF";
+			alimama_anglesize="0";
+			alimama_bgpic="0";
+			alimama_icon="0";
+			alimama_sizecode="11";
+			alimama_width=760;
+			alimama_height=90;
+			alimama_type=2;
+			</script>
+
+<script src="./文档_files/inf.js" type="text/javascript">
+			</script><iframe name="alimamaf0.7408610600978136" id="alimamaf0.7408610600978136" border="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="width:760px; height:90px;" src="./文档_files/alimama.htm"></iframe>
+</div></div>
+<div style="CLEAR: both; TEXT-ALIGN: center">
+<object id="flash1" type="application/x-shockwave-flash" height="100" width="960" data="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/advimage/banner_960x80_30k.swf"></object></div></div>
+<div class="clear" id="loginbar">
+<form action="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/login.asp" method="post"><input type="hidden" value="http://bbs.pfan.cn/showbbs.asp?id=244703" name="fromurl"> 
+<p><span class="redfont"><strong>请登陆或者注册新用户</strong></span> 用户名 <input class="input_style" size="10" name="username"> 密码 <input class="input_style" type="password" size="10" name="password"> <input type="checkbox" value="1" name="savename">记住密码 <input type="submit" value="登陆" name="Submit"> <a href="http://www.programfan.com/user/register.asp" target="_blank">注册新用户</a> <a href="http://www.programfan.com/user/forgetpass.asp" target="_blank">忘记密码了</a> 
+</p></form></div>
+<div id="nav">
+<div class="nav_left">
+<p><img src="./文档_files/arrow1.gif">&nbsp;您所在位置：<b><a href="http://bbs.pfan.cn/main.asp">论坛首页</a> — <a href="http://bbs.pfan.cn/bbs.asp?bbsid=5">C/C++语言</a> — <a href="http://bbs.pfan.cn/bbs.asp?bbsid=5&topicid=1">C语言</a> — 
+[原创]OpenGL入门学习——第十一课</b></p>
+<p><img src="./文档_files/arrow1.gif">&nbsp;本帖地址：&nbsp; 
+<a href="http://bbs.pfan.cn/post-244703.html">http://bbs.pfan.cn/post-244703.html</a>&nbsp; 
+[<a href="javascript:window.clipboardData.setData('text','http://bbs.pfan.cn/post-244703.html');alert('复制成功');">复制地址</a>] 
+[<a href="http://www.baidu.com/baidu?tn=yaozheng_pg&word=%5B%D4%AD%B4%B4%5DOpenGL%C8%EB%C3%C5%D1%A7%CF%B0%A1%AA%A1%AA%B5%DA%CA%AE%D2%BB%BF%CE" target="_blank">搜索相关帖子</a>] </p></div>
+<div class="nav_right"><!--<img src="image/email1.gif" width="17" height="15"><a href="javascript:subwin('sendmail.asp?id=244703','report',500,250)" class="a1">推荐</a>//--><a href="http://bbs.pfan.cn/mywebedit.asp?title=%5B%D4%AD%B4%B4%5DOpenGL%C8%EB%C3%C5%D1%A7%CF%B0%A1%AA%A1%AA%B5%DA%CA%AE%D2%BB%BF%CE&url=http%3A%2F%2Fbbs%2Epfan%2Ecn%2Fpost%2D244703%2Ehtml&tag=%C2%DB%CC%B3"><img height="16" src="./文档_files/care.gif" width="16">&nbsp;收藏</a>&nbsp; <a title="打印本页面" href="http://bbs.pfan.cn/showtxt.asp?id=244703&action=print"><img src="./文档_files/print.gif" border="0">&nbsp;打印</a> <a title="将本页面保存至硬盘" href="javascript:SaveAs(244703);"><img src="./文档_files/save.gif" border="0">&nbsp;保存</a>&nbsp; <a href="javascript:subwin('report.asp?id=244703','report',500,250)"><img height="16" src="./文档_files/arraw2.gif" width="16">&nbsp;举报</a>&nbsp; <a title="以文本方式阅读本帖" href="http://bbs.pfan.cn/showtxt.asp?id=244703"><img src="./文档_files/openwindow.gif">&nbsp;文本</a> 
+| <b>分享至：</b> <a href="javascript:void((function(s,d,e,r,l,p,t,z,c)%20{var%20f='http://v.t.sina.com.cn/share/share.php?appkey=832733636',u=z||d.location,p=['&url=',e(u),'& title=',e(t||d.title),'&source=',e(r),'&sourceUrl=',e(l),'& content=',c||'gb2312','&pic=',e(p||'')].join('');function a() {if(!window.open([f,p].join(''),'mb', ['toolbar=0,status=0,resizable=1,width=440,height=430,left=',(s.width- 440)/2,',top=',(s.height-430)/2].join('')))u.href=[f,p].join('');}; if(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else a();}) (screen,document,encodeURIComponent,'','','','[原创]OpenGL入门学习——第十一课 - 编程爱好者论坛','http://bbs.pfan.cn/post-244703.html','gb2312'));">新浪微博</a> 
+</div>
+<div class="clear"></div></div>
+<div id="button"><a class="button" href="http://bbs.pfan.cn/reply.asp?id=244703" target="_blank">回 帖</a> <a class="button" href="http://bbs.pfan.cn/post-244703.html#reply">快速回帖</a> <a class="button" href="http://bbs.pfan.cn/newpost.asp?bbsid=5" target="_blank">发 新 帖</a> <a class="button" href="javascript:location.reload()">刷新版面</a> </div>
+<div class="clear"></div>
+<div class="topic">
+<div class="title">
+<div class="t_left"><span class="redfont">主题：</span>[原创]OpenGL入门学习——第十一课 </div>
+<div class="t_right"><a href="http://bbs.pfan.cn/showbbs.asp?id=244703">[所有回帖]</a> 
+<a href="http://bbs.pfan.cn/showbbs.asp?id=244703&read=self">[只看作者帖]</a> <a href="http://bbs.pfan.cn/showbbs.asp?id=244703&read=df">[只看得分帖]</a> 
+</div></div>
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:49:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp; </div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">楼主</div>
+<div class="content">
+<div class="maincontent">大家久等了。<br>因为毕业参加工作的关系，很长时间没有更新。<br><br>现在放出第十课的内容。<br><br>首先还是以前课程的连接：<br><br><a href="http://www.programfan.com/club/showbbs.asp?id=184355" target="_blank">第一课，编写第一个OpenGL程序</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=184525" target="_blank">第二课，绘制几何图形</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=184769" target="_blank">第三课，绘制几何图形的一些细节问题</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=185032" target="_blank">第四课，颜色的选择</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=196017" target="_blank">第五课，三维的空间变换</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=196231" target="_blank">第六课，动画的制作</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=218828" target="_blank">第七课，使用光照来表现立体感</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=219518" target="_blank">第八课，使用显示列表</a><br><a href="http://www.programfan.com/club/showbbs.asp?id=224877" target="_blank">第九课，使用混合来实现半透明效果</a><br><a href="http://www.programfan.com/club/post-227694.html" target="_blank">第十课，BMP文件与像素操作</a><br>第十一课，纹理的使用入门&nbsp;&nbsp;——→&nbsp;&nbsp;<font color="#0000ff">本次课程的内容</font><br><br>我们在前一课中，学习了简单的像素操作，这意味着我们可以使用各种各样的BMP文件来丰富程序的显示效果，于是我们的OpenGL图形程序也不再像以前总是只显示几个多边形那样单调了。——但是这还不够。虽然我们可以将像素数据按照矩形进行缩小和放大，但是还不足以满足我们的要求。例如要将一幅世界地图绘制到一个球体表面，只使用glPixelZoom这样的函数来进行缩放显然是不够的。OpenGL纹理映射功能支持将一些像素数据经过变换（即使是比较不规则的变换）将其附着到各种形状的多边形表面。纹理映射功能十分强大，利用它可以实现目前计算机动画中的大多数效果，但是它也很复杂，我们不可能一次性的完全讲解。这里的课程只是关于二维纹理的简单使用。但即使是这样，也会使我们的程序在显示效果上迈出一大步。<br>下面几张图片说明了纹理的效果。前两张是我们需要的纹理，后一张是我们使用纹理后，利用OpenGL所产生出的效果。<br><br><img alt="http://blog.programfan.com/upfile/200707/20070730074740.jpg" src="./文档_files/20070730074740.jpg" onload="ResizeImage(this);"><br><img alt="http://blog.programfan.com/upfile/200707/20070730074746.jpg" src="./文档_files/20070730074746.jpg" onload="ResizeImage(this);"><br><img alt="http://blog.programfan.com/upfile/200707/20070730074751.jpg" src="./文档_files/20070730074751.jpg" onload="ResizeImage(this);"><br><br>纹理的使用是非常复杂的。因此即使是入门教程，在编写时我也多次进行删改，很多东西都被精简掉了，但本课的内容仍然较多，大家要有一点心理准备~<br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div>
+<div id="up">
+<div id="upnum">0 </div>
+<div id="uptext"><a href="javascript:alert('请登陆后推荐');">我要推荐</a> </div></div>
+<div class="clear"></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:51:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768225">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">1楼 </div>
+<div class="content">
+<div class="maincontent"><font color="#0000ff">1、启用纹理和载入纹理</font><br>就像我们曾经学习过的OpenGL光照、混合等功能一样。在使用纹理前，必须启用它。OpenGL支持一维纹理、二维纹理和三维纹理，这里我们仅介绍二维纹理。可以使用以下语句来启用和禁用二维纹理：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">&nbsp;&nbsp;&nbsp;&nbsp;glEnable(GL_TEXTURE_2D);&nbsp;&nbsp;//&nbsp;启用二维纹理<br>&nbsp;&nbsp;&nbsp;&nbsp;glDisable(GL_TEXTURE_2D);&nbsp;//&nbsp;禁用二维纹理</div><br><br>使用纹理前，还必须载入纹理。利用glTexImage2D函数可以载入一个二维的纹理，该函数有多达九个参数（虽然某些参数我们可以暂时不去了解），现在分别说明如下：<br>第一个参数为指定的目标，在我们的入门教材中，这个参数将始终使用GL_TEXTURE_2D。<br>第二个参数为“多重细节层次”，现在我们并不考虑多重纹理细节，因此这个参数设置为零。<br>第三个参数有两种用法。在OpenGL&nbsp;1.0，即最初的版本中，使用整数来表示颜色分量数目，例如：像素数据用RGB颜色表示，总共有红、绿、蓝三个值，因此参数设置为3，而如果像素数据是用RGBA颜色表示，总共有红、绿、蓝、alpha四个值，因此参数设置为4。而在后来的版本中，可以直接使用GL_RGB或GL_RGBA来表示以上情况，显得更直观（并带来其它一些好处，这里暂时不提）。注意：虽然我们使用Windows的BMP文件作为纹理时，一般是蓝色的像素在最前，其真实的格式为GL_BGR而不是GL_RGB，在数据的顺序上有所不同，但因为同样是红、绿、蓝三种颜色，因此这里仍然使用GL_RGB。（如果使用GL_BGR，OpenGL将无法识别这个参数，造成错误）<br>第四、五个参数是二维纹理像素的宽度和高度。这里有一个很需要注意的地方：OpenGL在以前的很多版本中，限制纹理的大小必须是2的整数次方，即纹理的宽度和高度只能是16,&nbsp;32,&nbsp;64,&nbsp;128,&nbsp;256等值，直到最近的新版本才取消了这个限制。而且，一些OpenGL实现（例如，某些PC机上板载显卡的驱动程序附带的OpenGL）并没有支持到如此高的OpenGL版本。因此在使用纹理时要特别注意其大小。尽量使用大小为2的整数次方的纹理，当这个要求无法满足时，使用gluScaleImage函数把图象缩放至所指定的大小（在后面的例子中有用到）。另外，无论旧版本还是新版本，都限制了纹理大小的最大值，例如，某OpenGL实现可能要求纹理最大不能超过1024*1024。可以使用如下的代码来获得OpenGL所支持的最大纹理：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">GLint&nbsp;<font color="#ff0000">max</font>;<br>glGetIntegerv(GL_MAX_TEXTURE_SIZE,&nbsp;&amp;<font color="#ff0000">max</font>);</div><br>这样<font color="#ff0000">max</font>的值就是当前OpenGL实现中所支持的最大纹理。<br>在很长一段时间内，很多图形程序都喜欢使用256*256大小的纹理，不仅因为256是2的整数次方，也因为某些硬件可以使用8位的整数来表示纹理坐标，2的8次方正好是256，这一巧妙的组合为处理纹理坐标时的硬件优化创造了一些不错的条件。<br><br>第六个参数是纹理边框的大小，我们没有使用纹理边框，因此这里设置为零。<br>最后三个参数与glDrawPixels函数的最后三个参数的使用方法相同，其含义可以参考glReadPixels的最后三个参数。大家可以复习一下第10课的相关内容，这里不再重复。<br>举个例子，如果有一幅大小为width*height，格式为Windows系统中使用最普遍的24位BGR，保存在pixels中的像素图象。则把这样一幅图象载入为纹理可使用以下代码：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">glTexImage2D(GL_TEXTURE_2D,&nbsp;0,&nbsp;GL_RGB,&nbsp;width,&nbsp;height,&nbsp;0,&nbsp;GL_BGR_EXT,&nbsp;GL_UNSIGNED_BYTE,&nbsp;pixels);</div><br><br>注意，载入纹理的过程可能比较慢，原因是纹理数据通常比较大，例如一幅512*512的BGR格式的图象，大小为0.75M。把这些像素数据从主内存传送到专门的图形硬件，这个过程中还可能需要把程序中所指定的像素格式转化为图形硬件所能识别的格式（或最能发挥图形硬件性能的格式），这些操作都需要较多时间。<br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:52:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768226">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">2楼 </div>
+<div class="content">
+<div class="maincontent"><font color="#0000ff">2、纹理坐标</font><br>我们先来回忆一下之前学过的一点内容：<br>当我们绘制一个三角形时，只需要指定三个顶点的颜色。三角形中其它各点的颜色不需要我们指定，这些点的颜色是OpenGL自己通过计算得到的。<br>在我们学习OpneGL光照时，法线向量、材质的指定，都是只需要在顶点处指定一下就可以了，其它地方的法线向量和材质都是OpenGL自己通过计算去获得。<br><br>纹理的使用方法也与此类似。只要指定每一个顶点在纹理图象中所对应的像素位置，OpenGL就会自动计算顶点以外的其它点在纹理图象中所对应的像素位置。<br>这听起来比较令人迷惑。我们可以这样类比一下：<br>在绘制一条线段时，我们设置其中一个端点为红色，另一个端点为绿色，则OpenGL会自动计算线段中其它各像素的颜色，如果是使用glShadeMode(GL_SMOOTH);，则最终会形成一种渐变的效果（例如线段中点，就是红色和绿色的中间色）。<br>类似的，在绘制一条线段时，我们设置其中一个端点使用“纹理图象中最左下角的颜色”作为它的颜色，另一个端点使用“纹理图象中最右上角的颜色”作为它的颜色，则OpenGL会自动在纹理图象中选择合适位置的颜色，填充到线段的各个像素（例如线段中点，可能就是选择纹理图象中央的那个像素的颜色）。<br><br>我们在类比时，使用了“纹理图象中最左下角的颜色”这种说法。但这种说法在很多时候不够精确，我们需要一种精确的方式来表示我们究竟使用纹理中的哪个像素。纹理坐标也就是因为这样的要求而产生的。以二维纹理为例，规定纹理最左下角的坐标为(0,&nbsp;0)，最右上角的坐标为(1,&nbsp;1)，于是纹理中的每一个像素的位置都可以用两个浮点数来表示（三维纹理会用三个浮点数表示，一维纹理则只用一个即可）。<br>使用glTexCoord*系列函数来指定纹理坐标。这些函数的用法与使用glVertex*系列函数来指定顶点坐标十分相似。例如：glTexCoord2f(0.0f,&nbsp;0.0f);指定使用(0,&nbsp;0)纹理坐标。<br>通常，每个顶点使用不同的纹理，于是下面这样形式的代码是比较常见的。<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">glBegin(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);&nbsp;&nbsp;glVertex3f(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);&nbsp;&nbsp;glVertex3f(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;/*&nbsp;...&nbsp;*/<br>glEnd();</div><br><br>当我们用一个坐标表示顶点在三维空间的位置时，可以使用glRotate*等函数来对坐标进行转换。纹理坐标也可以进行这种转换。只要使用glMatrixMode(GL_TEXTURE);，就可以切换到纹理矩阵（另外还有透视矩阵GL_PROJECTION和模型视图矩阵GL_MODELVIEW，详细情况在第五课有讲述），然后glRotate*，glScale*，glTranslate*等操作矩阵的函数就可以用来处理“对纹理坐标进行转换”的工作了。在简单应用中，可能不会对矩阵进行任何变换，这样考虑问题会比较简单。<br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:53:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768227">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">3楼 </div>
+<div class="content">
+<div class="maincontent"><font color="#0000ff">3、纹理参数</font><br>到这里，入门所需要掌握的所有难点都被我们掌握了。但是，我们的知识仍然是不够的，如果仅利用现有的知识去使用纹理的话，你可能会发现纹理完全不起作用。这是因为在使用纹理前还有某些参数是必须设置的。<br>使用glTexParameter*系列函数来设置纹理参数。通常需要设置下面四个参数：<br>GL_TEXTURE_MAG_FILTER：指当纹理图象被使用到一个大于它的形状上时（即：有可能纹理图象中的一个像素会被应用到实际绘制时的多个像素。例如将一幅256*256的纹理图象应用到一个512*512的正方形），应该如何处理。可选择的设置有GL_NEAREST和GL_LINEAR，前者表示“使用纹理中坐标最接近的一个像素的颜色作为需要绘制的像素颜色”，后者表示“使用纹理中坐标最接近的若干个颜色，通过加权平均算法得到需要绘制的像素颜色”。前者只经过简单比较，需要运算较少，可能速度较快，后者需要经过加权平均计算，其中涉及除法运算，可能速度较慢（但如果有专门的处理硬件，也可能两者速度相同）。从视觉效果上看，前者效果较差，在一些情况下锯齿现象明显，后者效果会较好（但如果纹理图象本身比较大，则两者在视觉效果上就会比较接近）。<br>GL_TEXTURE_MIN_FILTER：指当纹理图象被使用到一个小于（或等于）它的形状上时（即有可能纹理图象中的多个像素被应用到实际绘制时的一个像素。例如将一幅256*256的纹理图象应用到一个128*128的正方形），应该如何处理。可选择的设置有GL_NEAREST，GL_LINEAR，GL_NEAREST_MIPMAP_NEAREST，GL_NEAREST_MIPMAP_LINEAR，GL_LINEAR_MIPMAP_NEAREST和GL_LINEAR_MIPMAP_LINEAR。其中后四个涉及到mipmap，现在暂时不需要了解。前两个选项则和GL_TEXTURE_MAG_FILTER中的类似。此参数似乎是必须设置的（在我的计算机上，不设置此参数将得到错误的显示结果，但我目前并没有找到根据）。<br>GL_TEXTURE_WRAP_S：指当纹理坐标的第一维坐标值大于1.0或小于0.0时，应该如何处理。基本的选项有GL_CLAMP和GL_REPEAT，前者表示“截断”，即超过1.0的按1.0处理，不足0.0的按0.0处理。后者表示“重复”，即对坐标值加上一个合适的整数（可以是正数或负数），得到一个在[0.0,&nbsp;1.0]范围内的值，然后用这个值作为新的纹理坐标。例如：某二维纹理，在绘制某形状时，一像素需要得到纹理中坐标为(3.5,&nbsp;0.5)的像素的颜色，其中第一维的坐标值3.5超过了1.0，则在GL_CLAMP方式中将被转化为(1.0,&nbsp;0.5)，在GL_REPEAT方式中将被转化为(0.5,&nbsp;0.5)。在后来的OpenGL版本中，又增加了新的处理方式，这里不做介绍。如果不指定这个参数，则默认为GL_REPEAT。<br>GL_TEXTURE_WRAP_T：指当纹理坐标的第二维坐标值大于1.0或小于0.0时，应该如何处理。选项与GL_TEXTURE_WRAP_S类似，不再重复。如果不指定这个参数，则默认为GL_REPEAT。<br><br>设置参数的代码如下所示：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">glTexParameteri(GL_TEXTURE_2D,&nbsp;GL_TEXTURE_WRAP_S,&nbsp;GL_REPEAT);</div><br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:54:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768228">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">4楼 </div>
+<div class="content">
+<div class="maincontent"><font color="#0000ff">4、纹理对象</font><br>前面已经提到过，载入一幅纹理所需要的时间是比较多的。因此应该尽量减少载入纹理的次数。如果只有一幅纹理，则应该在第一次绘制前就载入它，以后就不需要再次载入了。这点与glDrawPixels函数很不相同。每次使用glDrawPixels函数，都需要把像素数据重新载入一次，因此用glDrawPixels函数来反复绘制图象的效率是较低的（如果只绘制一次，则不会有此问题），使用纹理来反复绘制图象是可取的做法。<br>但是，在每次绘制时要使用两幅或更多幅的纹理时，这个办法就行不通了。你可能会编写下面的代码：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">glTexImage2D(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);&nbsp;//&nbsp;载入第一幅纹理<br>//&nbsp;使用第一幅纹理<br>glTexImage2D(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);&nbsp;//&nbsp;载入第二幅纹理<br>//&nbsp;使用第二幅纹理<br>//&nbsp;当纹理的数量增加时，这段代码会变得更加复杂。</div><br><br>在绘制动画时，由于每秒钟需要将画面绘制数十次，因此如果使用上面的代码，就会反复载入纹理，这对计算机是非常大的负担，以目前的个人计算机配置来说，根本就无法让动画能够流畅的运行。因此，需要有一种机制，能够在不同的纹理之间进行快速的切换。<br><br>纹理对象正是这样一种机制。我们可以把每一幅纹理（包括纹理的像素数据、纹理大小等信息，也包括了前面所讲的纹理参数）放到一个纹理对象中，通过创建多个纹理对象来达到同时保存多幅纹理的目的。这样一来，在第一次使用纹理前，把所有的纹理都载入，然后在绘制时只需要指明究竟使用哪一个纹理对象就可以了。<br><br>使用纹理对象和使用显示列表有相似之处：使用一个正整数来作为纹理对象的编号。在使用前，可以调用glGenTextures来分配纹理对象。该函数有两种比较常见的用法：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">GLuint&nbsp;texture_ID;<br>glGenTextures(1,&nbsp;&amp;texture_ID);&nbsp;//&nbsp;分配一个纹理对象的编号</div><br>或者：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">GLuint&nbsp;texture_ID_list[5];<br>glGenTextures(5,&nbsp;texture_ID_list);&nbsp;//&nbsp;分配5个纹理对象的编号</div><br><br>零是一个特殊的纹理对象编号，表示“默认的纹理对象”，在分配正确的情况下，glGenTextures不会分配这个编号。与glGenTextures对应的是glDeleteTextures，用于销毁一个纹理对象。<br><br>在分配了纹理对象编号后，使用glBindTexture函数来指定“当前所使用的纹理对象”。然后就可以使用glTexImage*系列函数来指定纹理像素、使用glTexParameter*系列函数来指定纹理参数、使用glTexCoord*系列函数来指定纹理坐标了。如果不使用glBindTexture函数，那么glTexImage*、glTexParameter*、glTexCoord*系列函数默认在一个编号为0的纹理对象上进行操作。glBindTexture函数有两个参数，第一个参数是需要使用纹理的目标，因为我们现在只学习二维纹理，所以指定为GL_TEXTURE_2D，第二个参数是所使用的纹理的编号。<br>使用多个纹理对象，就可以使OpenGL同时保存多个纹理。在使用时只需要调用glBindTexture函数，在不同纹理之间进行切换，而不需要反复载入纹理，因此动画的绘制速度会有非常明显的提升。典型的代码如下所示：<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">//&nbsp;在程序开始时：分配好纹理编号，并载入纹理<br>glGenTextures(&nbsp;/*&nbsp;...&nbsp;*/&nbsp;);<br>glBindTexture(GL_TEXTURE_2D,&nbsp;texture_ID_1);<br>//&nbsp;载入第一幅纹理<br>glBindTexture(GL_TEXTURE_2D,&nbsp;texture_ID_2);<br>//&nbsp;载入第二幅纹理</div><br><br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">//&nbsp;在绘制时，切换并使用纹理，不需要再进行载入<br>glBindTexture(GL_TEXTURE_2D,&nbsp;texture_ID_1);&nbsp;//&nbsp;指定第一幅纹理<br>//&nbsp;使用第一幅纹理<br>glBindTexture(GL_TEXTURE_2D,&nbsp;texture_ID_2);&nbsp;//&nbsp;指定第二幅纹理<br>//&nbsp;使用第二幅纹理</div><br><br>提示：纹理对象是从OpenGL&nbsp;1.1版开始才有的，最旧版本的OpenGL&nbsp;1.0并没有处理纹理对象的功能。不过，我想各位的机器不会是比OpenGL&nbsp;1.1更低的版本（Windows&nbsp;95就自带了OpenGL&nbsp;1.1版本，遗憾的是，Microsoft对OpenGL的支持并不积极，Windows&nbsp;XP也还采用1.1版本。据说Vista使用的是OpenGL&nbsp;1.4版。当然了，如果安装显卡驱动的话，现在的主流显卡一般都附带了适用于该显卡的OpenGL&nbsp;1.4版或更高版本），所以这个问题也就不算是问题了。<br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:55:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768229">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">5楼 </div>
+<div class="content">
+<div class="maincontent"><font color="#0000ff">5、示例程序</font><br>纹理入门所需要掌握的知识点就介绍到这里了。但是如果不实际动手操作的话，也是不可能真正掌握的。下面我们来看看本课开头的那个纹理效果是如何实现的吧。<br>因为代码比较长，我把它拆分成了三段，大家如果要编译的话，应该把三段代码按顺序连在一起编译。如果要运行的话，除了要保证有一个名称为dummy.bmp，图象大小为1*1的24位BMP文件，还要把本课开始的两幅纹理图片保存到正确位置（一幅名叫ground.bmp，另一幅名叫wall.bmp。注意：我为了节省网络空间，把两幅图片都转成jpg格式了，读者把图片保存到本地后，需要把它们再转化为BMP格式。可以使用Windows&nbsp;XP带的画图程序中的“另存为”功能完成这一转换）。<br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:55:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768230">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">6楼 </div>
+<div class="content">
+<div class="maincontent">第一段代码如下。其中的主体——grab函数，是我们在第十课介绍过的，这里仅仅是抄过来用一下，目的是为了将最终效果图保存到一个名字叫grab.bmp的文件中。（当然了，为了保证程序的正确运行，那个大小为1*1的dummy.bmp文件仍然是必要的，参见第十课）<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed"><font color="#ff0000">#define</font>&nbsp;WindowWidth&nbsp;&nbsp;400<br><font color="#ff0000">#define</font>&nbsp;WindowHeight&nbsp;400<br><font color="#ff0000">#define</font>&nbsp;WindowTitle&nbsp;&nbsp;<font color="#ff33ff">"OpenGL纹理测试"</font><br><br><font color="#ff0000">#include</font>&nbsp;&lt;gl/glut.h&gt;<br><font color="#ff0000">#include</font>&nbsp;&lt;stdio.h&gt;<br><font color="#ff0000">#include</font>&nbsp;&lt;stdlib.h&gt;<br><br>/*&nbsp;函数grab<br>&nbsp;*&nbsp;抓取窗口中的像素<br>&nbsp;*&nbsp;假设窗口宽度为WindowWidth，高度为WindowHeight<br>&nbsp;*/<br><font color="#ff0000">#define</font>&nbsp;BMP_Header_Length&nbsp;54<br><font color="blue">void</font>&nbsp;grab(<font color="blue">void</font>)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;FILE*&nbsp;&nbsp;&nbsp;&nbsp;pDummyFile;<br>&nbsp;&nbsp;&nbsp;&nbsp;FILE*&nbsp;&nbsp;&nbsp;&nbsp;pWritingFile;<br>&nbsp;&nbsp;&nbsp;&nbsp;GLubyte*&nbsp;pPixelData;<br>&nbsp;&nbsp;&nbsp;&nbsp;GLubyte&nbsp;&nbsp;BMP_Header[BMP_Header_Length];<br>&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;&nbsp;&nbsp;&nbsp;i,&nbsp;j;<br>&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;&nbsp;&nbsp;&nbsp;PixelDataLength;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;计算像素数据的实际长度<br>&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;WindowWidth&nbsp;*&nbsp;3;&nbsp;&nbsp;&nbsp;//&nbsp;得到每一行的像素数据长度<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">while</font>(&nbsp;i%4&nbsp;!=&nbsp;0&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;补充数据，直到i是的倍数<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++i;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;本来还有更快的算法，<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;但这里仅追求直观，对速度没有太高要求<br>&nbsp;&nbsp;&nbsp;&nbsp;PixelDataLength&nbsp;=&nbsp;i&nbsp;*&nbsp;WindowHeight;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;分配内存和打开文件<br>&nbsp;&nbsp;&nbsp;&nbsp;pPixelData&nbsp;=&nbsp;(GLubyte*)<font color="#ff0000">malloc</font>(PixelDataLength);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;pPixelData&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">exit</font>(0);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;pDummyFile&nbsp;=&nbsp;<font color="#ff0000">fopen</font>(<font color="#ff33ff">"dummy.bmp"</font>,&nbsp;<font color="#ff33ff">"rb"</font>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;pDummyFile&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">exit</font>(0);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;pWritingFile&nbsp;=&nbsp;<font color="#ff0000">fopen</font>(<font color="#ff33ff">"grab.bmp"</font>,&nbsp;<font color="#ff33ff">"wb"</font>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;pWritingFile&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">exit</font>(0);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;读取像素<br>&nbsp;&nbsp;&nbsp;&nbsp;glPixelStorei(GL_UNPACK_ALIGNMENT,&nbsp;4);<br>&nbsp;&nbsp;&nbsp;&nbsp;glReadPixels(0,&nbsp;0,&nbsp;WindowWidth,&nbsp;WindowHeight,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GL_BGR_EXT,&nbsp;GL_UNSIGNED_BYTE,&nbsp;pPixelData);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;把dummy.bmp的文件头复制为新文件的文件头<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fread</font>(BMP_Header,&nbsp;<font color="blue">sizeof</font>(BMP_Header),&nbsp;1,&nbsp;pDummyFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fwrite</font>(BMP_Header,&nbsp;<font color="blue">sizeof</font>(BMP_Header),&nbsp;1,&nbsp;pWritingFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fseek</font>(pWritingFile,&nbsp;0x0012,&nbsp;SEEK_SET);<br>&nbsp;&nbsp;&nbsp;&nbsp;i&nbsp;=&nbsp;WindowWidth;<br>&nbsp;&nbsp;&nbsp;&nbsp;j&nbsp;=&nbsp;WindowHeight;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fwrite</font>(&amp;i,&nbsp;<font color="blue">sizeof</font>(i),&nbsp;1,&nbsp;pWritingFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fwrite</font>(&amp;j,&nbsp;<font color="blue">sizeof</font>(j),&nbsp;1,&nbsp;pWritingFile);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;写入像素数据<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fseek</font>(pWritingFile,&nbsp;0,&nbsp;SEEK_END);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fwrite</font>(pPixelData,&nbsp;PixelDataLength,&nbsp;1,&nbsp;pWritingFile);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;释放内存和关闭文件<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pDummyFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pWritingFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pPixelData);<br>}</div><br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:56:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768231">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">7楼 </div>
+<div class="content">
+<div class="maincontent">第二段代码是我们的重点。它包括两个函数。其中power_of_two比较简单，虽然实现手段有点奇特，但也并非无法理解（即使真的无法理解，读者也可以给出自己的解决方案，用一些循环以及多使用一些位操作也没关系。反正，这里不是重点啦）。另一个load_texture函数却是重头戏：打开BMP文件、读取其中的高度和宽度信息、计算像素数据所占的字节数、为像素数据分配空间、读取像素数据、对像素图象进行缩放（如果必要的话）、分配新的纹理编号、填写纹理参数、载入纹理，所有的功能都在同一个函数里面完成了。为了叙述方便，我把所有的解释都放在了注释里。<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">/*&nbsp;函数power_of_two<br>&nbsp;*&nbsp;检查一个整数是否为2的整数次方，如果是，返回1，否则返回0<br>&nbsp;*&nbsp;实际上只要查看其二进制位中有多少个，如果正好有1个，返回1，否则返回0<br>&nbsp;*&nbsp;在“查看其二进制位中有多少个”时使用了一个小技巧<br>&nbsp;*&nbsp;使用n&nbsp;&amp;=&nbsp;(n-1)可以使得n中的减少一个（具体原理大家可以自己思考）<br>&nbsp;*/<br><font color="blue">int</font>&nbsp;power_of_two(<font color="blue">int</font>&nbsp;n)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;n&nbsp;&lt;=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;(n&nbsp;&amp;&nbsp;(n-1))&nbsp;==&nbsp;0;<br>}<br><br>/*&nbsp;函数load_texture<br>&nbsp;*&nbsp;读取一个BMP文件作为纹理<br>&nbsp;*&nbsp;如果失败，返回0，如果成功，返回纹理编号<br>&nbsp;*/<br>GLuint&nbsp;load_texture(<font color="blue">const</font>&nbsp;<font color="blue">char</font>*&nbsp;file_name)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;width,&nbsp;height,&nbsp;total_bytes;<br>&nbsp;&nbsp;&nbsp;&nbsp;GLubyte*&nbsp;pixels&nbsp;=&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;GLuint&nbsp;last_texture_ID,&nbsp;texture_ID&nbsp;=&nbsp;0;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;打开文件，如果失败，返回<br>&nbsp;&nbsp;&nbsp;&nbsp;FILE*&nbsp;pFile&nbsp;=&nbsp;<font color="#ff0000">fopen</font>(file_name,&nbsp;<font color="#ff33ff">"rb"</font>);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;pFile&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;读取文件中图象的宽度和高度<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fseek</font>(pFile,&nbsp;0x0012,&nbsp;SEEK_SET);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fread</font>(&amp;width,&nbsp;4,&nbsp;1,&nbsp;pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fread</font>(&amp;height,&nbsp;4,&nbsp;1,&nbsp;pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fseek</font>(pFile,&nbsp;BMP_Header_Length,&nbsp;SEEK_SET);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;计算每行像素所占字节数，并根据此数据计算总像素字节数<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;line_bytes&nbsp;=&nbsp;width&nbsp;*&nbsp;3;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">while</font>(&nbsp;line_bytes&nbsp;%&nbsp;4&nbsp;!=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++line_bytes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;total_bytes&nbsp;=&nbsp;line_bytes&nbsp;*&nbsp;height;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;根据总像素字节数分配内存<br>&nbsp;&nbsp;&nbsp;&nbsp;pixels&nbsp;=&nbsp;(GLubyte*)<font color="#ff0000">malloc</font>(total_bytes);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;pixels&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;读取像素数据<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;<font color="#ff0000">fread</font>(pixels,&nbsp;total_bytes,&nbsp;1,&nbsp;pFile)&nbsp;&lt;=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;在旧版本的OpenGL中<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;如果图象的宽度和高度不是的整数次方，则需要进行缩放<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;这里并没有检查OpenGL版本，出于对版本兼容性的考虑，按旧版本处理<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;另外，无论是旧版本还是新版本，<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;当图象的宽度和高度超过当前OpenGL实现所支持的最大值时，也要进行缩放<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;<font color="#ff0000">max</font>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glGetIntegerv(GL_MAX_TEXTURE_SIZE,&nbsp;&amp;<font color="#ff0000">max</font>);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;!power_of_two(width)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;!power_of_two(height)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;width&nbsp;&gt;&nbsp;<font color="#ff0000">max</font><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;||&nbsp;height&nbsp;&gt;&nbsp;<font color="#ff0000">max</font>&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">const</font>&nbsp;GLint&nbsp;new_width&nbsp;=&nbsp;256;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">const</font>&nbsp;GLint&nbsp;new_height&nbsp;=&nbsp;256;&nbsp;//&nbsp;规定缩放后新的大小为边长的正方形<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLint&nbsp;new_line_bytes,&nbsp;new_total_bytes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLubyte*&nbsp;new_pixels&nbsp;=&nbsp;0;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;计算每行需要的字节数和总字节数<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_line_bytes&nbsp;=&nbsp;new_width&nbsp;*&nbsp;3;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">while</font>(&nbsp;new_line_bytes&nbsp;%&nbsp;4&nbsp;!=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++new_line_bytes;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_total_bytes&nbsp;=&nbsp;new_line_bytes&nbsp;*&nbsp;new_height;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;分配内存<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_pixels&nbsp;=&nbsp;(GLubyte*)<font color="#ff0000">malloc</font>(new_total_bytes);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;new_pixels&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;进行像素缩放<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gluScaleImage(GL_RGB,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width,&nbsp;height,&nbsp;GL_UNSIGNED_BYTE,&nbsp;pixels,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new_width,&nbsp;new_height,&nbsp;GL_UNSIGNED_BYTE,&nbsp;new_pixels);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;释放原来的像素数据，把pixels指向新的像素数据，并重新设置width和height<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pixels&nbsp;=&nbsp;new_pixels;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;width&nbsp;=&nbsp;new_width;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;height&nbsp;=&nbsp;new_height;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;分配一个新的纹理编号<br>&nbsp;&nbsp;&nbsp;&nbsp;glGenTextures(1,&nbsp;&amp;texture_ID);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">if</font>(&nbsp;texture_ID&nbsp;==&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">fclose</font>(pFile);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;绑定新的纹理，载入纹理并设置纹理参数<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;在绑定前，先获得原来绑定的纹理编号，以便在最后进行恢复<br>&nbsp;&nbsp;&nbsp;&nbsp;glGetIntegerv(GL_TEXTURE_BINDING_2D,&nbsp;&amp;last_texture_ID);<br>&nbsp;&nbsp;&nbsp;&nbsp;glBindTexture(GL_TEXTURE_2D,&nbsp;texture_ID);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexParameteri(GL_TEXTURE_2D,&nbsp;GL_TEXTURE_MIN_FILTER,&nbsp;GL_LINEAR);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexParameteri(GL_TEXTURE_2D,&nbsp;GL_TEXTURE_MAG_FILTER,&nbsp;GL_LINEAR);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexParameteri(GL_TEXTURE_2D,&nbsp;GL_TEXTURE_WRAP_S,&nbsp;GL_REPEAT);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexParameteri(GL_TEXTURE_2D,&nbsp;GL_TEXTURE_WRAP_T,&nbsp;GL_REPEAT);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexEnvf(GL_TEXTURE_ENV,&nbsp;GL_TEXTURE_ENV_MODE,&nbsp;GL_REPLACE);<br>&nbsp;&nbsp;&nbsp;&nbsp;glTexImage2D(GL_TEXTURE_2D,&nbsp;0,&nbsp;GL_RGB,&nbsp;width,&nbsp;height,&nbsp;0,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GL_BGR_EXT,&nbsp;GL_UNSIGNED_BYTE,&nbsp;pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;glBindTexture(GL_TEXTURE_2D,&nbsp;last_texture_ID);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;之前为pixels分配的内存可在使用glTexImage2D以后释放<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;因为此时像素数据已经被OpenGL另行保存了一份（可能被保存到专门的图形硬件中）<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="#ff0000">free</font>(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;texture_ID;<br>}</div><br><br>=====================未完，请勿跟帖=====================
+<p align="right">&nbsp;<span class="grayfont">&nbsp;最后修改于2007-7-30 8:01:00</span> 
+</p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:57:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768232">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">8楼 </div>
+<div class="content">
+<div class="maincontent">第三段代码是关于显示的部分，以及main函数。注意，我们只在main函数中读取了两幅纹理，并把它们保存在各自的纹理对象中，以后就再也不载入纹理。每次绘制时使用glBindTexture在不同的纹理对象中切换。另外，我们使用了超过1.0的纹理坐标，由于GL_TEXTURE_WRAP_S和GL_TEXTURE_WRAP_T参数都被设置为GL_REPEAT，所以得到的效果就是纹理像素的重复，有点向地板砖的花纹那样。读者可以试着修改“墙”的纹理坐标，将5.0修改为10.0，看看效果有什么变化。<br>
+<div style="BORDER-RIGHT: #cccccc 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #cccccc 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #cccccc 1px dashed; WIDTH: 90%; PADDING-TOP: 5px; BORDER-BOTTOM: #cccccc 1px dashed">/*&nbsp;两个纹理对象的编号<br>&nbsp;*/<br>GLuint&nbsp;texGround;<br>GLuint&nbsp;texWall;<br><br><font color="blue">void</font>&nbsp;display(<font color="blue">void</font>)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;清除屏幕<br>&nbsp;&nbsp;&nbsp;&nbsp;glClear(GL_COLOR_BUFFER_BIT&nbsp;|&nbsp;GL_DEPTH_BUFFER_BIT);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;设置视角<br>&nbsp;&nbsp;&nbsp;&nbsp;glMatrixMode(GL_PROJECTION);<br>&nbsp;&nbsp;&nbsp;&nbsp;glLoadIdentity();<br>&nbsp;&nbsp;&nbsp;&nbsp;gluPerspective(75,&nbsp;1,&nbsp;1,&nbsp;21);<br>&nbsp;&nbsp;&nbsp;&nbsp;glMatrixMode(GL_MODELVIEW);<br>&nbsp;&nbsp;&nbsp;&nbsp;glLoadIdentity();<br>&nbsp;&nbsp;&nbsp;&nbsp;gluLookAt(1,&nbsp;5,&nbsp;5,&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;1);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;使用“地”纹理绘制土地<br>&nbsp;&nbsp;&nbsp;&nbsp;glBindTexture(GL_TEXTURE_2D,&nbsp;texGround);<br>&nbsp;&nbsp;&nbsp;&nbsp;glBegin(GL_QUADS);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;0.0f);&nbsp;glVertex3f(-8.0f,&nbsp;-8.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;5.0f);&nbsp;glVertex3f(-8.0f,&nbsp;8.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;5.0f);&nbsp;glVertex3f(8.0f,&nbsp;8.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;0.0f);&nbsp;glVertex3f(8.0f,&nbsp;-8.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;glEnd();<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;使用“墙”纹理绘制栅栏<br>&nbsp;&nbsp;&nbsp;&nbsp;glBindTexture(GL_TEXTURE_2D,&nbsp;texWall);<br>&nbsp;&nbsp;&nbsp;&nbsp;glBegin(GL_QUADS);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;0.0f);&nbsp;glVertex3f(-6.0f,&nbsp;-3.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;1.0f);&nbsp;glVertex3f(-6.0f,&nbsp;-3.0f,&nbsp;1.5f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;1.0f);&nbsp;glVertex3f(6.0f,&nbsp;-3.0f,&nbsp;1.5f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;0.0f);&nbsp;glVertex3f(6.0f,&nbsp;-3.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;glEnd();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;旋转后再绘制一个<br>&nbsp;&nbsp;&nbsp;&nbsp;glRotatef(-90,&nbsp;0,&nbsp;0,&nbsp;1);<br>&nbsp;&nbsp;&nbsp;&nbsp;glBegin(GL_QUADS);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;0.0f);&nbsp;glVertex3f(-6.0f,&nbsp;-3.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(0.0f,&nbsp;1.0f);&nbsp;glVertex3f(-6.0f,&nbsp;-3.0f,&nbsp;1.5f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;1.0f);&nbsp;glVertex3f(6.0f,&nbsp;-3.0f,&nbsp;1.5f);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;glTexCoord2f(5.0f,&nbsp;0.0f);&nbsp;glVertex3f(6.0f,&nbsp;-3.0f,&nbsp;0.0f);<br>&nbsp;&nbsp;&nbsp;&nbsp;glEnd();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;交换缓冲区，并保存像素数据到文件<br>&nbsp;&nbsp;&nbsp;&nbsp;glutSwapBuffers();<br>&nbsp;&nbsp;&nbsp;&nbsp;grab();<br>}<br><br><font color="blue">int</font>&nbsp;<font color="#ff0000">main</font>(<font color="blue">int</font>&nbsp;argc,&nbsp;<font color="blue">char</font>*&nbsp;argv[])<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;GLUT初始化<br>&nbsp;&nbsp;&nbsp;&nbsp;glutInit(&amp;argc,&nbsp;argv);<br>&nbsp;&nbsp;&nbsp;&nbsp;glutInitDisplayMode(GLUT_DOUBLE&nbsp;|&nbsp;GLUT_RGBA);<br>&nbsp;&nbsp;&nbsp;&nbsp;glutInitWindowPosition(100,&nbsp;100);<br>&nbsp;&nbsp;&nbsp;&nbsp;glutInitWindowSize(WindowWidth,&nbsp;WindowHeight);<br>&nbsp;&nbsp;&nbsp;&nbsp;glutCreateWindow(WindowTitle);<br>&nbsp;&nbsp;&nbsp;&nbsp;glutDisplayFunc(&amp;display);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;在这里做一些初始化<br>&nbsp;&nbsp;&nbsp;&nbsp;glEnable(GL_DEPTH_TEST);<br>&nbsp;&nbsp;&nbsp;&nbsp;glEnable(GL_TEXTURE_2D);<br>&nbsp;&nbsp;&nbsp;&nbsp;texGround&nbsp;=&nbsp;load_texture(<font color="#ff33ff">"ground.bmp"</font>);<br>&nbsp;&nbsp;&nbsp;&nbsp;texWall&nbsp;=&nbsp;load_texture(<font color="#ff33ff">"wall.bmp"</font>);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;开始显示<br>&nbsp;&nbsp;&nbsp;&nbsp;glutMainLoop();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;<font color="blue">return</font>&nbsp;0;<br>}</div><br><br>=====================未完，请勿跟帖=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-7-30 7:57:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=768233">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">9楼 </div>
+<div class="content">
+<div class="maincontent">小结：<br>本课介绍了OpenGL纹理的入门知识。<br>利用纹理可以进行比glReadPixels和glDrawPixels更复杂的像素绘制，因此可以实现很多精彩的效果。<br>本课只涉及了二维纹理。OpenGL还支持一维和三维纹理，其原理是类似的。<br>在使用纹理前，要启用纹理。并且，还需要将像素数据载入到纹理中。注意纹理的宽度和高度，目前很多OpenGL的实现都还要求其值为2的整数次方，如果纹理图象本身并不满足这个条件，可以使用gluScaleImage函数来进行缩放。为了正确的使用纹理，需要设置纹理参数。<br>载入纹理所需要的系统开销是比较大的，应该尽可能减少载入纹理的次数。如果程序中只使用一幅纹理，则只在第一次使用前载入，以后不必重新载入。如果程序中要使用多幅纹理，不应该反复载入它们，而应该将每个纹理都用一个纹理对象来保存，并使用glBindTextures在各个纹理之间进行切换。<br>本课还给出了一个程序（到目前为止，它是这个OpenGL教程系列中所给出的程序中最长的）。该程序演示了纹理的基本使用方法，本课程涉及到的几乎所有内容都被包括其中，这是对本课中文字说明的一个补充。如果读者有什么不明白的地方，也可以以这个程序作为参考。<br><br>=====================&nbsp;&nbsp;第十一课&nbsp;完&nbsp;&nbsp;=====================<br>=====================TO&nbsp;BE&nbsp;CONTINUED=====================
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=221468" target="_blank">mtymm</a></p>
+<p><span class="redfont">专家分：0</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=221468" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=mtymm','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=mtymm" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-8-11 17:30:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=773541">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">10楼 </div>
+<div class="content">
+<div class="maincontent">很不错奥，努力学习
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=222462" target="_blank">stdlll</a></p>
+<p><span class="redfont">专家分：360</span></p>
+<p><img alt="级别:2" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=222462" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=stdlll','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=stdlll" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-8-21 16:11:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=776726">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">11楼 </div>
+<div class="content">
+<div class="maincontent"><br><font size="3"><font color="#ff0000">很详细，厉害了</font></font>
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=226567" target="_blank">mmjuns</a></p>
+<p><span class="redfont">专家分：0</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=226567" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=mmjuns','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=mmjuns" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-15 8:55:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=797079">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">12楼 </div>
+<div class="content">
+<div class="maincontent">好棒！！你的每课我都看了。你真的太棒了！！从这里我学习了太多东西。对于一个初学者，这个教程真的很好！！<br>你的每个程序我都运行了~！这一课里面有一个小问题哦：<br>在函数GLuint&nbsp;load_texture(const&nbsp;char*&nbsp;file_name)中，<br>定义了这么两个变量。<br>GLuint&nbsp;last_texture_ID,&nbsp;texture_ID&nbsp;=&nbsp;0;<br>后面进行ID賦值的时候，会报错的。<br>glGetIntegerv(GL_TEXTURE_BINDING_2D,&nbsp;&amp;last_texture_ID);<br>这里应该是：<br>GLint&nbsp;last_texture_ID;<br>GLuint&nbsp;texture_ID=0;<br>
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-17 16:08:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=798369">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">13楼 </div>
+<div class="content">
+<div class="maincontent">to&nbsp;mmjuns:<br>你所说的问题确实存在。<br>在我的代码中，定义last_texture_ID为GLuint类型，因此&amp;last_texture_ID的类型是(GLuint*)，与glGetIngeterv函数所要求的(GLint*)有所不同。<br>不过，并不需要因此把last_texture_ID的类型修改为GLint。OpenGL是用GLuint类型来表示纹理编号，而不是用GLint来表示。因此仍然应该定义last_texture_ID为GLuint类型，只是在调用glGetIntegerv的时候，显式的执行类型转换即可。<br>代码如下：<br>glGetIntegerv(GL_TEXTURE_BINDING_2D,&nbsp;(GLint*)last_texture_ID);<br><br>关于报错的问题，C语言和C++语言有所不同。C语言一般只对上面的问题给出警告，而C++语言则会认为这是一个错误。由此也可以看出C++在类型的限定上比C语言更加严格。
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">sunrisefe</a></p>
+<p><span class="redfont">专家分：0</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=sunrisefe','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=sunrisefe" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-17 21:30:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=798574">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">14楼 </div>
+<div class="content">
+<div class="maincontent">直接使用你给出的源码时，因为fopen()是已经不用的函数，所以报错，我改为：<br>FILE&nbsp;*stream;<br>errno_t&nbsp;err;<br>&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;打开文件，如果失败，返回<br>&nbsp;&nbsp;&nbsp;/*fopen_s(&amp;stream,file_name,&nbsp;"rb");*/<br><br>&nbsp;&nbsp;&nbsp;if(&nbsp;(err&nbsp;&nbsp;=&nbsp;fopen_s(&nbsp;&amp;stream,&nbsp;file_name,&nbsp;"r"&nbsp;))&nbsp;!=0&nbsp;)<br>&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&nbsp;"The&nbsp;file&nbsp;'file_name'&nbsp;was&nbsp;not&nbsp;opened\n"&nbsp;);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;else<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&nbsp;"The&nbsp;file&nbsp;'crt_fopen_s.c'&nbsp;was&nbsp;opened\n"&nbsp;);<br><br>相应后面的出现pFile的地方都改为stream了，运行时后台也显示出了：The&nbsp;file&nbsp;'crt_fopen_s.c'&nbsp;was&nbsp;opened\n。&nbsp;但是最后结果只显示出一白色的图形，没有纹理效果，这是怎么回事呢。
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">sunrisefe</a></p>
+<p><span class="redfont">专家分：0</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=sunrisefe','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=sunrisefe" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-17 21:37:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=798581">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">15楼 </div>
+<div class="content">
+<div class="maincontent">原因出在这里，怎么回事<br><br>//&nbsp;读取像素数据<br>&nbsp;&nbsp;&nbsp;&nbsp;if(&nbsp;fread(pixels,&nbsp;total_bytes,&nbsp;1,&nbsp;stream)&nbsp;&lt;=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fclose(stream);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&nbsp;"&nbsp;读取像素数据&nbsp;失败\n"&nbsp;);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">sunrisefe</a></p>
+<p><span class="redfont">专家分：0</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=52806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=sunrisefe','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=sunrisefe" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-18 8:43:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=798669">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">16楼 </div>
+<div class="content">
+<div class="maincontent"><br>调出来了，楼主发的代码有问题：读取像素时，应该修改成如下，即是将fread的第二三个参数调换位置<br>&nbsp;//&nbsp;读取像素数据<br>&nbsp;&nbsp;&nbsp;&nbsp;if(&nbsp;fread(pixels,&nbsp;1,&nbsp;total_bytes,&nbsp;stream)&nbsp;&lt;=&nbsp;0&nbsp;)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free(pixels);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fclose(stream);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf(&nbsp;"&nbsp;读取像素数据&nbsp;失败\n"&nbsp;);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;0;<br>&nbsp;&nbsp;&nbsp;&nbsp;}
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">eastcowboy</a></p>
+<p><span class="redfont">专家分：23700</span></p>
+<p><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_diamond.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_star.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"><img alt="级别:119" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=45011" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=eastcowboy','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=eastcowboy" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2007-10-18 9:24:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=798698">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">17楼 </div>
+<div class="content">
+<div class="maincontent">回复sunrisefe：<br>我觉得下面两个语句区别并不大。<br>fread(pixels,&nbsp;1,&nbsp;total_bytes,&nbsp;stream)<br>fread(pixels,&nbsp;total_bytes,&nbsp;1,&nbsp;stream)<br><br>两者都会尝试读取total_bytes个字节的数据，并返回成功读取到的数据数目。前者认为每个数据只有一个字节，总共有total_bytes个数据；后者认为每个数据有total_bytes个字节，总共有一个数据。因此，当数据不足时，前者会认为已经读取到一部分的数据（因为每个数据只有一个字节，即使数据不足，前面部分还是可以用的），因而指针所指的数据有一部分被赋值，函数返回一个大于零且小于total_bytes的值；后者则会认为所有的字节不能构成一个完整的数据，因此一个数据也没有读取到，所以指针所指内容不会被修改，而且函数返回零。<br><br>如果你使用我的那个代码遇到问题，而修改为你的形式后工作良好，有可能是因为你的图片文件本身不完整，例如少了一个字节，这样你的代码会认为读取了多数的字节，可以继续工作；而我的代码则认为数据信息不完整，不能继续工作。
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">`凯猪`</a></p>
+<p><span class="redfont">专家分：190</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=`凯猪`','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=`%BF%AD%D6%ED`" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2008-1-31 22:01:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=836693">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">18楼 </div>
+<div class="content">
+<div class="maincontent">向eastcowboy学习!!
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">`凯猪`</a></p>
+<p><span class="redfont">专家分：190</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=`凯猪`','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=`%BF%AD%D6%ED`" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2008-2-15 13:31:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=838829">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right">19楼 </div>
+<div class="content">
+<div class="maincontent">=====================TO&nbsp;BE&nbsp;CONTINUED=====================<br><br>怎不出了?<br>期待ing...<br>
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div class="topic">
+<div class="main">
+<div class="main_left">
+<div class="userinfo">
+<p>作者：<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">`凯猪`</a></p>
+<p><span class="redfont">专家分：190</span></p>
+<p><img alt="级别:1" src="./文档_files/dj_shell.gif"></p><img src="./文档_files/0.gif"> 
+<div class="user">
+<p><img height="16" src="./文档_files/search.gif" width="16">&nbsp;<a href="http://bbs.pfan.cn/member.asp?userid=248806" target="_blank">会员信息</a></p>
+<p><img src="./文档_files/message.gif">&nbsp;<a href="javascript:subwin('sendmessage.asp?touser=`凯猪`','sendmessage',500,400)">发短消息</a></p>
+<p><img height="16" src="./文档_files/website.gif" width="16">&nbsp;<a style="COLOR: red" href="http://blog.pfan.cn/redirect.asp?user=`%BF%AD%D6%ED`" target="_blank">所属博客</a></p></div></div></div>
+<div class="main_right">
+<div><span class="grayfont">发表时间：2008-2-15 14:33:00</span>&nbsp;&nbsp;&nbsp; <a href="http://bbs.pfan.cn/reply.asp?id=244703">[回复]</a>&nbsp;&nbsp;<a href="http://bbs.pfan.cn/reply.asp?id=244703&quote=1&replyid=838837">[引用]</a> 
+</div>
+<div style="FONT-WEIGHT: bold; TEXT-ALIGN: right"><a name="last">20</a>楼 </div>
+<div class="content">
+<div class="maincontent">调出来了,不过是去掉了个u......
+<p align="right"> </p></div></div></div></div>
+<div class="clear"></div></div>
+<div id="page">
+<form name="f1" method="post">[首页] [上页] [下页] [尾页] &nbsp;&nbsp;&nbsp;&nbsp;共有 20 回帖 
+当前第 1 页（共1页&nbsp;20帖/页）&nbsp;&nbsp;&nbsp;&nbsp; 跳转至第 <select class="input_style" onchange="jump(document.f1.page.value);" name="page"> <option value="1" selected="">1</option></select> 页 </form></div>
+<div id="button"><a class="button" href="http://bbs.pfan.cn/reply.asp?id=244703" target="_blank">回 帖</a> <a class="button" href="http://bbs.pfan.cn/post-244703.html#reply">快速回帖</a> <a class="button" href="http://bbs.pfan.cn/newpost.asp?bbsid=5" target="_blank">发 新 帖</a> <a class="button" href="javascript:location.reload()">刷新版面</a> </div>
+<div class="clear" id="manage">
+<p align="center"><b>版主管理：&nbsp; <a onclick="{if(confirm(&#39;您确认删除此帖吗？&#39;)){return true;}return false;}" href="javascript:bbsmanage('del1');">删除此帖</a>&nbsp;&nbsp;&nbsp;<!--<a href="javascript:bbsmanage('delreply');" onclick="{if(confirm('您确认删除所有回复帖吗？')){return true;}return false;}">删除回复帖</a>&nbsp;&nbsp;&nbsp;//--><a onclick="javascript:subwin(&#39;&#39;,&#39;move&#39;,430,250);" href="javascript:movebbs();">转贴</a>&nbsp;&nbsp;&nbsp;<a href="javascript:bbsmanage('head');">置顶</a>&nbsp;&nbsp;&nbsp;<a href="javascript:bbsmanage('best');">加入精华</a>&nbsp;&nbsp;&nbsp;<a onclick="{if(confirm(&#39;您确认强制结帖吗？&#39;)){return true;}return false;}" href="javascript:bbsmanage('over');">强制结帖</a><a href="javascript:bbsmanage('best');"></a>&nbsp;&nbsp;&nbsp;<a style="COLOR: #ff0000" href="http://bbs.pfan.cn/mbbs.asp?bbsid=5">&gt;&gt;&gt;进入管理页面</a></b></p>
+<form name="bbsmanage" action="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/bbsmanage.asp" method="post"><input type="hidden" name="action"> <input type="hidden" value="244703" name="id"> <input type="hidden" value="5" name="bbsid"> </form>
+<form name="movebbs" action="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/movebbs.asp" method="post" target="move"><input type="hidden" value="244703" name="id"> <input type="hidden" value="5" name="bbsid"> </form></div>
+<div align="center">
+<script type="text/javascript"> 
+	cpro_client='yaozheng_cpr';
+	cpro_cbd='#A2BE43'; 
+	cpro_cbg='#F4FAE1'; 
+	cpro_ctitle='#178102'; 
+	cpro_cdesc='#444444'; 
+	cpro_curl='#2D4383'; 
+	cpro_clink='#FFFFFF'; 
+	cpro_flush=2; 
+	cpro_w=960; 
+	cpro_h=75; 
+	cpro_template='text_default_960_75'; 
+	</script>
+
+<script language="JavaScript" src="./文档_files/cp.js" type="text/javascript"></script><div style="display:none">-</div><iframe align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" width="960" height="75" allowtransparency="" src="./文档_files/uijs.htm"></iframe>
+</div>
+<form name="bbsaction" action="file:///F:/opengl/opengl%E6%95%99%E7%A8%8B/bbsaction.asp" method="post"><input type="hidden" value="244703" name="id"> <input type="hidden" name="action"> </form>
+<div id="footer">
+<div id="globalfooter">
+<p><a href="http://www.programfan.com/aboutus.asp">关于本站</a> - <a href="http://www.programfan.com/daohang.asp">网站导航</a> - <!--<a href="http://www.programfan.com/ad.asp">广告服务</a> - //--><a href="http://www.programfan.com/joinus.asp">诚邀加盟</a> - <a href="http://www.programfan.com/contact.asp?subject=%B9%D8%D3%DA%CD%F8%D5%BE">联系站长</a> - <a href="http://www.programfan.com/friendlink.asp">友情链接</a> - <a href="http://www.programfan.com/sponsor.asp">赞助本站</a> -
+<script language="JavaScript" src="./文档_files/stat.htm" charset="gb2312"></script><a href="http://www.cnzz.com/stat/website.php?web_id=1793701" target="_blank" title="站长统计">站长统计</a><img src="./文档_files/stat(1).htm" border="0" width="0" height="0">
+ </p>
+<p>Copyright&#169; 1999-2010 Programfan.com. All Rights Reserved</p>
+<p>网站制作&amp;维护：Hannibal &nbsp;&nbsp;&nbsp;Email: <a href="mailto:webmaster@pfan.cn">webmaster@pfan.cn</a></p></div>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Fa137c57e3649cc7e5f555285623afcc6' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="http://hm.baidu.com/h.js?a137c57e3649cc7e5f555285623afcc6" type="text/javascript"></script>
+</div>
+</body></html>
